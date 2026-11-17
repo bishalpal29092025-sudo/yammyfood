@@ -1,12 +1,13 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
   globalIgnores(['dist']),
+
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -19,4 +20,23 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
-])
+
+  // Allow the shadcn buttonVariants helper export.
+  {
+    files: ['src/components/ui/button.tsx'],
+    rules: {
+      'react-refresh/only-export-components': [
+        'error',
+        { allowExportNames: ['buttonVariants'] },
+      ],
+    },
+  },
+
+  // Application entry point: initializes React, not a component module.
+  {
+    files: ['src/main.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
+]);

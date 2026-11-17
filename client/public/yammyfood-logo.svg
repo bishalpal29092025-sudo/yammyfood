@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160" role="img" aria-labelledby="title desc">
+  <title id="title">YammyFood logo</title>
+  <desc id="desc">Orange food-themed brand mark and YammyFood wordmark.</desc>
+  <defs>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="136" height="136" rx="34" fill="url(#orange)"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 38v29c0 13 8 22 20 22s20-9 20-22V38"/>
+    <path d="M54 38v18M67 38v18M81 38v18M94 38v18"/>
+    <path d="M74 89v34"/>
+    <path d="M108 39c-13 0-22 11-22 25 0 12 7 21 17 23v36"/>
+  </g>
+  <text x="178" y="101" font-family="Geist, Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-2.4" fill="#171717">Yammy<tspan fill="#F97316">Food.</tspan></text>
+</svg>
